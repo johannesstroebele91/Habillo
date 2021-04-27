@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Basics
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) using the TypeScript flag. The project was stripped down (e.g. testing files).
 
 ## Available Scripts
 

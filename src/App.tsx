@@ -1,9 +1,11 @@
-import React from 'react';
+import React from "react";
+import HabitItem from "./components/HabitItem";
 
 function App() {
+
   return (
     <div>
-      <h2>Let's get started!</h2>
+      <HabitItem />
     </div>
   );
 }

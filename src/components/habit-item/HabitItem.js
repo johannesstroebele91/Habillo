@@ -1,20 +1,24 @@
 import "./HabitItem.css";
-import { Card } from "antd";
+import { Card, Row, Col, Tooltip, Button } from "antd";
+import { PlusCircleOutlined, MinusCircleOutlined } from "@ant-design/icons";
 
 function HabitItem(props) {
-  console.log(props);
   return (
-    <Card
-      type="inner"
-      title={props.habit.title}
-      size="small"
-      extra={<a href="#">More</a>}
-    >{props.habit.description}
-      <div>
-        <p>{props.habit.deadline.toISOString()}</p>
-        <p>{props.habit.streak}</p>
-        <p></p>
-      </div>
+    <Card type="inner" title={props.habit.title} size="small" extra={<a href="#">&#10143; {props.habit.streak}</a>} >
+      <Row>
+        <Col span={4}>
+          <Button icon={<MinusCircleOutlined />} />
+        </Col>
+        <Col span={16}>
+          {props.habit.description}
+          <div>
+            <p>{props.habit.deadline.toISOString()}</p>
+          </div>
+        </Col>
+        <Col span={4}>
+          <Button icon={<PlusCircleOutlined />} />
+        </Col>
+      </Row>
     </Card>
   );
 }

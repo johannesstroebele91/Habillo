@@ -1,8 +1,9 @@
-interface Habit {
+export interface Habit {
+  id: number;
   title: string;
   deadline: Date;
   description: string;
-  streak: number;
   list: string;
+  streak: number;
 };
-export default Habit;
+

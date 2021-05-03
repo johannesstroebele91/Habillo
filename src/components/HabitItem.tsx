@@ -12,10 +12,10 @@ const HabitItem: React.FC<HabitItemProps> = ({ habit }) => {
   return (
     <>
         <Card
-          style={{ width: 270, whiteSpace: "normal", paddingTop: 12 }}
+          style={{ whiteSpace: "normal", paddingTop: 12 }}
           size="small"
         >
-          <Row>
+          <Row justify="space-around" style={{ width: 300}} >
             <Col style={{ textAlign: "center" }}>
               <Button
                 type="primary"

@@ -19,7 +19,7 @@ function App() {
             {habits
               .filter((item) => item.list === category)
               .map((filteredItems) => (
-                <HabitItem habit={filteredItems} />
+                <HabitItem key={filteredItems.id} habit={filteredItems} />
               ))}
           </Card>
         ))}

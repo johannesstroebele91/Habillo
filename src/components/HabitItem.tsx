@@ -1,5 +1,5 @@
 import { Habit } from "../models/types";
-import { Card, Row, Col, Button, Typography } from "antd";
+import { Row, Col, Button, Typography } from "antd";
 import { PlusOutlined, MinusOutlined } from "@ant-design/icons";
 
 interface HabitItemProps {
@@ -11,20 +11,17 @@ const HabitItem: React.FC<HabitItemProps> = ({ habit }) => {
 
   return (
     <>
-        <Card
-          style={{ whiteSpace: "normal", paddingTop: 12 }}
-          size="small"
-        >
-          <Row>
-            <Col style={{ textAlign: "center", background: 'lightgrey', padding: 6}}>
+        <div>
+          <Row style={{flexWrap: 'nowrap', border: '2px solid lightgrey', margin: 2}}>
+            <Col style={{ textAlign: "center", background: '#ffcccb', padding: 6}}>
               <Button
-                type="primary"
+                type="dashed"
                 size="small"
                 shape="circle"
                 icon={<MinusOutlined />}
               />
             </Col>
-            <Col span={16} style={{ textAlign: "left" }}>
+            <Col span={16} style={{ textAlign: "left", padding: 6 }}>
               <Title level={5}>{habit.title}</Title>
               <Text>{habit.description}</Text>
               <Row justify="space-between">
@@ -41,16 +38,16 @@ const HabitItem: React.FC<HabitItemProps> = ({ habit }) => {
                 </Col>
               </Row>
             </Col>
-            <Col style={{ textAlign: "center" }}>
+            <Col style={{ textAlign: "center", background: '#ADD8E6', padding: 6 }}>
               <Button
-                type="primary"
+                type="dashed"
                 size="small"
                 shape="circle"
                 icon={<PlusOutlined />}
               />
             </Col>
           </Row>
-        </Card>
+        </div>
     </>
   );
 };

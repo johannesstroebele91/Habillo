@@ -15,8 +15,8 @@ const HabitItem: React.FC<HabitItemProps> = ({ habit }) => {
           style={{ whiteSpace: "normal", paddingTop: 12 }}
           size="small"
         >
-          <Row justify="space-around" style={{ width: 300}} >
-            <Col style={{ textAlign: "center" }}>
+          <Row>
+            <Col style={{ textAlign: "center", background: 'lightgrey', padding: 6}}>
               <Button
                 type="primary"
                 size="small"

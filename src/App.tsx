@@ -1,6 +1,5 @@
 import "./App.css";
 import { habits } from "./initial-habits-data";
-import { Card } from "antd";
 import HabitItem from "./components/HabitItem";
 
 // Only the App.tsx gets changed in an React app
@@ -12,16 +11,19 @@ function App() {
 
   return (
     <>
-      <h1>Todo App</h1>
-      <div style={{display: 'flex'}}>
+      <h1 style={{padding: '3px 0 0 6px', color: '#f2f8ff'}}>Habillo</h1>
+      <div style={{ display: "flex", flexWrap: "nowrap" }}>
         {unique.map((category) => (
-          <Card title={category}>
-            {habits
-              .filter((item) => item.list === category)
-              .map((filteredItems) => (
-                <HabitItem key={filteredItems.id} habit={filteredItems} />
-              ))}
-          </Card>
+          <div style={{ background: "#EBECF0", borderRadius: 6, margin: 3, padding: 6 }}>
+            <h2 style={{padding: '6, 3, 3, 3'}}>{category.charAt(0).toUpperCase() + category.slice(1)}</h2>
+            <div>
+              {habits
+                .filter((item) => item.list === category)
+                .map((filteredItems) => (
+                  <HabitItem key={filteredItems.id} habit={filteredItems} />
+                ))}
+            </div>
+          </div>
         ))}
       </div>
     </>

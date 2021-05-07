@@ -1,5 +1,10 @@
 {
     "cSpell.words": [
         "habillo"
-    ]
+    ],
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#23236D",
+        "titleBar.activeBackground": "#313199",
+        "titleBar.activeForeground": "#FBFBFE"
+    }
 }

@@ -18,11 +18,7 @@ const HabitLists: React.FC<HabitListsProps> = ({ habits }) => {
   // Submit
   const onFinish = (habit: Habit) => {
     // Set new state to re-render site for reconsidering new add habit
-    setHabitsLists([
-      ...habits,
-      habit
-    ]
-    );
+    setHabitsLists((prevState) => ( [...prevState, habit]));
   };
 
   // RETURN

@@ -1,6 +1,6 @@
 import { Habit } from "./models/types";
 
-export const habits: Habit[] = [
+export const INITIAL_HABITS: Habit[] = [
     {
       id: 1,
       title: "Work from highest priority",

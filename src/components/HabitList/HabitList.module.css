@@ -1,0 +1,11 @@
+.lists {
+  background: #ebecf0;
+  width: 320px;
+  border-radius: 6;
+  margin: 9;
+  padding: 6;
+}
+
+.lists > div {
+  margin: 12px;
+}

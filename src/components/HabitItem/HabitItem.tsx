@@ -1,4 +1,4 @@
-import { Habit } from "../models/types";
+import { Habit } from "../../models/types";
 import { Row, Col, Button, Typography, DatePicker } from "antd";
 import { PlusOutlined, MinusOutlined } from "@ant-design/icons";
 import moment from "moment";
@@ -42,6 +42,7 @@ const HabitItem: React.FC<HabitItemProps> = ({ habit }) => {
       >
         <Button
           onClick={() => clickChangeStreakHandler(false)}
+          danger
           size="small"
           shape="circle"
           icon={<MinusOutlined />}

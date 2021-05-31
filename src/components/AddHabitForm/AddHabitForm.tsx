@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Form, Input, Button, Modal, DatePicker } from "antd";
-import { Habit } from "../models/types";
+import { Habit } from "../../models/types";
 
 interface AddHabitFormProps {
   category: string;

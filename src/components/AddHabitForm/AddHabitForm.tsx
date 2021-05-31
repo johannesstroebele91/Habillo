@@ -17,7 +17,7 @@ const AddHabitForm: React.FC<AddHabitFormProps> = ({ onFinish, category }) => {
     setIsModalVisible(false);
     const habit: Habit = {
       ...values,
-      deadline: values.deadline._d,
+      deadline: values.deadline,
       list: category,
       id: Math.floor(Math.random() * 1000),
       streak: 0,

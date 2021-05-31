@@ -10,15 +10,14 @@ interface HabitListProps {
 }
 const HabitList: React.FC<HabitListProps> = ({habitCategory, habitsList, onFinish}) => {
   return (
-    <div className={styles.lists}>
+    <div className={styles.list}>
       <h2 style={{ padding: "12px 3px 3px 9px" }}>
         {habitCategory.charAt(0).toUpperCase() + habitCategory.slice(1)}
       </h2>
       <div>
         {habitsList
-          .filter((item) => item.list === habitCategory)
-          .map((filteredItems) => (
-            <HabitItem key={filteredItems.id} habit={filteredItems} />
+          .map((habit) => (
+            <HabitItem key={habit.id} habit={habit} />
           ))}
       </div>
       <AddHabitForm key={habitCategory} category={habitCategory} onFinish={onFinish} />

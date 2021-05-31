@@ -48,9 +48,16 @@ const HabitItem: React.FC<HabitItemProps> = ({ habit }) => {
           icon={<MinusOutlined />}
         />
       </Col>
-      <Col style={{ textAlign: "left", background: "#F4F5F7", padding: 6 }}>
+      <Col
+        style={{
+          textAlign: "left",
+          background: "#F4F5F7",
+          padding: 6,
+          width: 240,
+        }}
+      >
         <Title level={5}>{habit.title}</Title>
-        <Text>{habit.description}</Text>
+        <Text style={{ overflowWrap: "break-word" }}>{habit.description}</Text>
         <Row justify="space-between" align="middle">
           <Col>
             <DatePicker

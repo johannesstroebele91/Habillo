@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { Habit } from "../../models/types";
+
 import HabitList from "../HabitList/HabitList";
 
 interface HabitListsProps {
   habits: Habit[];
 }
 
-const HabitLists: React.FC<HabitListsProps> = ({ habits }) => {
+const Habits: React.FC<HabitListsProps> = ({ habits }) => {
   // Creates a list with all list elements on the habits object
   let categories = habits.map((item) => item.list);
 
@@ -25,12 +26,17 @@ const HabitLists: React.FC<HabitListsProps> = ({ habits }) => {
 
   // RETURN
   return (
-    <div style={{ display: "flex", flexWrap: "nowrap", background: "black" }}>
+    <div style={{ display: "flex", flexWrap: "nowrap"}}>
       {categoriesUnique.map((habitCategory) => (
-        <HabitList key={habitCategory} habitCategory={habitCategory} habitsList={habitsLists} onFinish={onFinishHandler}/>
+        <HabitList
+          key={habitCategory}
+          habitCategory={habitCategory}
+          habitsList={habitsLists.filter((item) => item.list === habitCategory)}
+          onFinish={onFinishHandler}
+        />
       ))}
     </div>
   );
 };
 
-export default HabitLists;
+export default Habits;
